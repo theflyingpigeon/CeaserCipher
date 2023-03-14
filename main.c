@@ -14,30 +14,23 @@
 
 
 #include <stdio.h>
-#include <string.h> //String functionality
+#include <string.h> 
 #include <stdlib.h>
 
-//Define my CaesarCipher Function
 void caeserCipher(char* plainText, int key);
 
 int main(void) {
 
     int key = 1;
     char plainText[101];
-
-    //Ask user for the plain text
+    
     printf("Please enter the plain text you want to encrypt: ");
-
-    //Get the Users text input and store it as plaintext
     fgets(plainText, sizeof(plainText), stdin);
-
-    //Print the ciphered text
     printf("The ciphered text is : ");
-
-    //Print the ciphered text
     caeserCipher(plainText, key);
 
-    //system("pause") //Uncomment if your using Winsdows
+    //Uncomment if your using Winsdows
+    //system("pause")
 }
 
 void caeserCipher(char* plainText, int key){
